@@ -1,0 +1,149 @@
+.player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40rem;
+    height: 64rem;
+    box-shadow: 0 1rem 1rem rgba($color-dark, .4);
+    border-radius: 10px;
+    font-family: inherit;
+
+    &__logo {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-weight: 700;
+        font-family: cursive;
+        color: $album-color-green;
+    }
+
+    &__visuals {
+        position: relative;
+        height: 45rem;
+        background-image: url(../../assets/album_thumbnail.jpg);
+        background-size: cover;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        &--blurr {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($album-color-dark-green, .4);
+            backdrop-filter: blur(4px);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            z-index: 0;
+        }
+    }
+
+    &__gfx-left {
+
+    }
+
+    &__album-art {
+
+    }
+
+    &__gfx-right {
+
+    }
+
+    &__gfx {
+
+    }
+
+    &__name-of-song {
+        width: 100%;
+        position: absolute;
+        top: 70%;
+        text-align: center;
+        font-weight: 300;
+        color: $album-color-green;
+    }
+
+    &__name-of-artist {
+        width: 100%;
+        position: absolute;
+        top: 80%;
+        text-align: center;
+        font-weight: 300;
+        color: $album-color-green;
+    }
+
+    &__control-panel {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-top: -1rem;
+        height: 20rem;
+        background-color: $album-color-dark-green;
+        border-radius: 10px;
+        border: 2px solid $album-color-dark-2-green;
+        padding: 1.5rem;
+    }
+
+    &__time-panel {
+        width: 100%;
+        height: 8rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__time-played {
+        display: block;
+        position: absolute;
+        left: 2.5%;
+    }
+
+    &__total-time {
+        display: block;
+        position: absolute;
+        right: 2.5%;
+    }
+
+    &__time-bar {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        width: 90%;
+        height: 2%;
+        background-color: $album-color-dark-2-green;
+        border-radius: 2px;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 100%;
+            background-color: $album-color-green;
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            left: 20.5%;
+            top: -150%;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: $album-color-green;
+        }
+    }
+
+    &__controls {
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: 1rem;
+    }
+}

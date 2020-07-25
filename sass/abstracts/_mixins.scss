@@ -1,0 +1,5 @@
+@mixin text-style {
+    background-image: linear-gradient(to top, $album-color-dark-2-green, $album-color-green);
+    color: transparent;
+    -webkit-background-clip: text;
+}
